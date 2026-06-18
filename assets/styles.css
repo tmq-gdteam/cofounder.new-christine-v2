@@ -166,6 +166,8 @@ select {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.25em;
+  white-space: nowrap;
   min-height: 2.85rem;
   padding: 0.82rem 1.08rem;
   border: 1px solid transparent;
@@ -1954,36 +1956,52 @@ form[data-form="early-access"] button[type="submit"] + .helper {
 
 /* Product Role Cards Layout */
 .product-role-card {
+  min-height: 390px;
+  padding: 28px 28px;
   display: flex;
   flex-direction: column;
-  min-height: 440px;
 }
 
-.product-role-card .card-top {
+.role-card-top {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
 }
 
-.product-role-card .card-bottom {
+.role-card-icon {
+  width: 24px;
+  height: 24px;
+  margin-top: 8px;
+  color: var(--dark-muted);
+}
+
+.role-card-title {
+  min-height: 56px;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.role-card-description {
+  min-height: 82px;
+  margin-top: 14px;
+  line-height: 1.45;
+}
+
+.role-card-bottom {
   margin-top: auto;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 14px;
 }
 
 .product-role-card .example-output {
-  min-height: 96px;
+  min-height: 74px;
+  padding: 14px 16px;
   display: flex;
   align-items: center;
 }
 
-.product-role-card .role-card-title {
-  min-height: 72px;
-  display: flex;
-  align-items: flex-start;
+.product-role-card .status-pill {
+  align-self: flex-start;
 }
 
-.product-role-card .role-card-description {
-  min-height: 96px;
-}
