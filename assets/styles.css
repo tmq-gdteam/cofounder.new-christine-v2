@@ -1249,6 +1249,15 @@ h3 {
   resize: vertical;
 }
 
+form[data-form="early-access"] button[type="submit"] {
+  margin-bottom: 16px;
+}
+
+form[data-form="early-access"] button[type="submit"] + .helper {
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
 .helper,
 .form-message {
   color: var(--ink-soft);
@@ -1301,8 +1310,8 @@ h3 {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: minmax(220px, 1fr) repeat(3, minmax(140px, auto));
-  gap: 2rem;
+  grid-template-columns: minmax(220px, 1fr) auto;
+  gap: 4rem;
 }
 
 .footer-grid p,
@@ -1312,19 +1321,40 @@ h3 {
 
 .footer-links {
   display: grid;
-  gap: 0.5rem;
+  grid-template-columns: repeat(3, minmax(140px, 1fr));
+  column-gap: clamp(48px, 6vw, 96px);
+  row-gap: 32px;
+  align-items: start;
 }
 
-.footer-links strong {
-  margin-bottom: 0.25rem;
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.footer-links a {
+.footer-column h4 {
+  margin: 0 0 20px;
+  color: var(--dark-text);
+  font-size: 1rem;
+}
+
+.footer-column a {
+  display: block;
+  margin: 0 0 14px;
+  text-align: left;
+  padding-left: 0;
   text-decoration: none;
 }
 
-.footer-links a:hover {
+.footer-column a:hover {
   color: var(--dark-text);
+}
+
+@media (max-width: 640px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
 }
 
 .reveal {
@@ -1518,6 +1548,11 @@ h3 {
   text-underline-offset: 3px;
 }
 
+.case-detail-hero .case-study-brand-name,
+.dark-section .case-study-brand-name {
+  color: var(--dark-text);
+  text-decoration-color: var(--primary);
+}
 
 .case-detail-hero {
   padding: 8rem 0 4rem;
