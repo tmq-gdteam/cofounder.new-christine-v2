@@ -127,7 +127,7 @@ select {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.05rem;
+  gap: 32px;
   font-size: 0.91rem;
   color: var(--dark-muted);
 }
@@ -1460,31 +1460,64 @@ form[data-form="early-access"] button[type="submit"] + .helper {
 
 @media (max-width: 560px) {
   .nav-wrap {
-    width: min(100% - 1rem, 1180px);
-    gap: 0.5rem;
+    height: 64px;
+    padding-inline: 16px;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .brand {
+    min-width: 0;
+    flex: 1;
+    gap: 0.45rem;
   }
 
   .brand span:last-child {
-    max-width: 7.2rem;
+    max-width: none;
     overflow: hidden;
     text-overflow: ellipsis;
   }
 
-  .nav-actions .button {
-    min-height: 2.5rem;
-    padding: 0.68rem 0.7rem;
-    font-size: 0.8rem;
-    max-width: 6.2rem;
-    text-align: center;
+  .nav-actions {
+    gap: 10px;
   }
 
-  .brand {
-    gap: 0.45rem;
+  .menu-toggle {
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav-actions .button {
+    padding: 10px 14px;
+    font-size: 14px;
+    line-height: 1;
+    min-height: 40px;
+    border-radius: 8px;
+    white-space: nowrap;
+    max-width: none;
+  }
+
+  .hide-mobile {
+    display: none;
   }
 
   .brand-mark {
     width: 1.85rem;
     height: 1.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-actions .button {
+    padding: 9px 12px;
+    font-size: 13px;
+    min-height: 38px;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav-actions .button {
+    display: none;
   }
 
   .hero {
