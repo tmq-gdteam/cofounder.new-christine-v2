@@ -839,8 +839,17 @@ h3 {
   transition: border-color 200ms ease, color 200ms ease;
 }
 
+.mode-card .button {
+  transition: transform 200ms ease;
+}
+
+.mode-card:hover .button {
+  transform: translateY(-2px);
+}
+
 .mode-card:hover .agent-chip {
   border-color: rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--dark-text);
 }
 
@@ -1166,6 +1175,46 @@ h3 {
   opacity: 0;
   transform: translateY(18px);
   transition: opacity 520ms ease, transform 520ms ease;
+  transition-delay: var(--delay, 0ms);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes subtle-pulse {
+    0% { border-color: var(--line); }
+    50% { border-color: rgba(255, 107, 53, 0.5); }
+    100% { border-color: var(--line); }
+  }
+
+  @keyframes task-highlight {
+    0% { background: transparent; }
+    10% { background: rgba(255, 255, 255, 0.05); }
+    90% { background: rgba(255, 255, 255, 0.05); }
+    100% { background: transparent; }
+  }
+
+  @keyframes attention-pulse {
+    0% { background: transparent; border-color: transparent; }
+    50% { background: rgba(242, 184, 75, 0.08); border-color: rgba(242, 184, 75, 0.2); }
+    100% { background: transparent; border-color: transparent; }
+  }
+
+  #hero-direction-card {
+    animation: subtle-pulse 3s infinite ease-in-out;
+  }
+
+  .active-task {
+    animation: task-highlight 2s ease-in-out forwards;
+  }
+  
+  .active-task .status {
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.15);
+  }
+
+  .attention-row {
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    animation: attention-pulse 3s infinite ease-in-out;
+  }
 }
 
 .reveal.is-visible {

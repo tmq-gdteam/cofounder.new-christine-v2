@@ -73,3 +73,26 @@ document.querySelectorAll("form[data-form]").forEach((form) => {
     setMessage(form, success, "success");
   });
 });
+
+// Hero task animation loop
+if (window.matchMedia && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const taskList = document.getElementById("hero-task-list");
+  if (taskList) {
+    const tasks = taskList.querySelectorAll(".task-item");
+    if (tasks.length > 0) {
+      let currentIndex = 0;
+      
+      // Cycle through tasks to simulate active workstreams
+      setInterval(() => {
+        // Remove active class from all
+        tasks.forEach(t => t.classList.remove("active-task"));
+        
+        // Add to current
+        tasks[currentIndex].classList.add("active-task");
+        
+        // Move to next, loop back if at end
+        currentIndex = (currentIndex + 1) % tasks.length;
+      }, 2500); // 2.5 seconds per task
+    }
+  }
+}
