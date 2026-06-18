@@ -1897,3 +1897,24 @@ form[data-form="early-access"] button[type="submit"] + .helper {
   margin-top: 14px;
   line-height: 1.5;
 }
+
+/* Footer Brand and Description */
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.footer-description {
+  max-width: 360px;
+  line-height: 1.55;
+  text-wrap: balance;
+  color: var(--dark-muted);
+}
