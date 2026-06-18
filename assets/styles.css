@@ -677,6 +677,11 @@ h3 {
   gap: 1rem;
 }
 
+.product-role-section {
+  padding-top: 4rem;
+  padding-bottom: 5rem;
+}
+
 .product-role-section .section-inner {
   width: 100%;
   max-width: 1320px;
@@ -686,13 +691,14 @@ h3 {
 
 .product-role-section .section-heading {
   max-width: 820px;
+  margin-bottom: 52px;
 }
 
 .product-role-grid {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, minmax(260px, 1fr));
-  gap: clamp(18px, 1.5vw, 24px);
+  gap: clamp(22px, 2vw, 26px);
 }
 
 .product-role-card {
@@ -1956,8 +1962,8 @@ form[data-form="early-access"] button[type="submit"] + .helper {
 
 /* Product Role Cards Layout */
 .product-role-card {
-  min-height: 390px;
-  padding: 28px 28px;
+  min-height: 370px;
+  padding: 24px 24px;
   display: flex;
   flex-direction: column;
 }
@@ -1965,38 +1971,39 @@ form[data-form="early-access"] button[type="submit"] + .helper {
 .role-card-top {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .role-card-icon {
   width: 24px;
   height: 24px;
-  margin-top: 8px;
+  margin-top: 4px;
+  margin-bottom: 6px;
   color: var(--dark-muted);
 }
 
 .role-card-title {
-  min-height: 56px;
+  min-height: auto;
   line-height: 1.05;
-  margin: 0;
+  margin: 0 0 18px 0;
 }
 
 .role-card-description {
-  min-height: 82px;
-  margin-top: 14px;
-  line-height: 1.45;
+  min-height: 72px;
+  margin: 0 0 18px 0;
+  line-height: 1.4;
 }
 
 .role-card-bottom {
   margin-top: auto;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 12px;
 }
 
 .product-role-card .example-output {
-  min-height: 74px;
-  padding: 14px 16px;
+  min-height: 64px;
+  padding: 12px 14px;
   display: flex;
   align-items: center;
 }
