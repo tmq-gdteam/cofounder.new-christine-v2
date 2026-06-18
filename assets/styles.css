@@ -1310,8 +1310,8 @@ form[data-form="early-access"] button[type="submit"] + .helper {
 
 .footer-grid {
   display: grid;
-  grid-template-columns: minmax(220px, 1fr) auto;
-  gap: 4rem;
+  grid-template-columns: minmax(220px, 1fr) repeat(3, minmax(140px, auto));
+  gap: 2rem;
 }
 
 .footer-grid p,
@@ -1321,40 +1321,19 @@ form[data-form="early-access"] button[type="submit"] + .helper {
 
 .footer-links {
   display: grid;
-  grid-template-columns: repeat(3, minmax(140px, 1fr));
-  column-gap: clamp(48px, 6vw, 96px);
-  row-gap: 32px;
-  align-items: start;
+  gap: 0.5rem;
 }
 
-.footer-column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.footer-links strong {
+  margin-bottom: 0.25rem;
 }
 
-.footer-column h4 {
-  margin: 0 0 20px;
-  color: var(--dark-text);
-  font-size: 1rem;
-}
-
-.footer-column a {
-  display: block;
-  margin: 0 0 14px;
-  text-align: left;
-  padding-left: 0;
+.footer-links a {
   text-decoration: none;
 }
 
-.footer-column a:hover {
+.footer-links a:hover {
   color: var(--dark-text);
-}
-
-@media (max-width: 640px) {
-  .footer-links {
-    grid-template-columns: 1fr;
-  }
 }
 
 .reveal {
