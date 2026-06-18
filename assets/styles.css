@@ -1951,3 +1951,39 @@ form[data-form="early-access"] button[type="submit"] + .helper {
   text-wrap: balance;
   color: var(--dark-muted);
 }
+
+/* Product Role Cards Layout */
+.product-role-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 440px;
+}
+
+.product-role-card .card-top {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-role-card .card-bottom {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.product-role-card .example-output {
+  min-height: 96px;
+  display: flex;
+  align-items: center;
+}
+
+.product-role-card .role-card-title {
+  min-height: 72px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.product-role-card .role-card-description {
+  min-height: 96px;
+}
