@@ -676,24 +676,29 @@ h3 {
 }
 
 .product-role-section .section-inner {
-  max-width: 1240px;
+  width: 100%;
+  max-width: 1320px;
   margin: 0 auto;
   padding-inline: clamp(24px, 5vw, 80px);
+}
+
+.product-role-section .section-heading {
+  max-width: 820px;
 }
 
 .product-role-grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(20px, 2vw, 32px);
+  grid-template-columns: repeat(4, minmax(260px, 1fr));
+  gap: clamp(18px, 1.5vw, 24px);
 }
 
 .product-role-card {
-  min-width: 0;
   width: 100%;
+  min-width: 0;
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1180px) {
   .product-role-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1504,6 +1509,16 @@ h3 {
 
 /* --- CASE STUDY DETAIL PAGES --- */
 
+.case-study-brand-name {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--primary);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+
 .case-detail-hero {
   padding: 8rem 0 4rem;
   text-align: center;
@@ -1857,4 +1872,14 @@ h3 {
 /* Utilities */
 .text-center {
   text-align: center;
+}
+
+/* Early access form button spacing */
+.form-shell button[type="submit"] {
+  margin-bottom: 16px;
+}
+
+.form-shell button[type="submit"] + .helper {
+  margin-top: 14px;
+  line-height: 1.5;
 }
